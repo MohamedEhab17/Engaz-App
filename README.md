@@ -87,20 +87,20 @@ To run this project, you need to:
 ### 📚 Books & Details
 | **Feature** | **Arabic (Dark)** | **English (Dark)** | **Light Mode** |
 | :---: | :---: | :---: | :---: |
-| **All Books** | <img src="screens/Books dark ar.jpeg" width="200" /> | <img src="screens/book dark en.jpeg" width="200" /> | <img src="screens/book light.jpeg" width="200" /> |
-| **Book Details** | <img src="screens/book details dark ar.jpeg" width="200" /> | <img src="screens/book details dark en.jpeg" width="200" /> | <img src="screens/book details light.jpeg" width="200" /> |
+| **All Books** | <img src="screenShoots/Books dark ar.jpeg" width="200" /> | <img src="screenShoots/book dark en.jpeg" width="200" /> | <img src="screenShoots/book light.jpeg" width="200" /> |
+| **Book Details** | <img src="screenShoots/book details dark ar.jpeg" width="200" /> | <img src="screenShoots/book details dark en.jpeg" width="200" /> | <img src="screenShoots/book details light.jpeg" width="200" /> |
 
 ### 👥 Customers
 | **Feature** | **Arabic (Dark)** | **English (Dark)** | **Light Mode** |
 | :---: | :---: | :---: | :---: |
-| **Customers List** | <img src="screens/customers dark ar.jpeg" width="200" /> | <img src="screens/customers dark en.jpeg" width="200" /> | <img src="screens/customers light.jpeg" width="200" /> |
-| **Customer Books** | <img src="screens/customer book dark ar.jpeg" width="200" /> | <img src="screens/customer book dark en.jpeg" width="200" /> | <img src="screens/customer book light.jpeg" width="200" /> |
+| **Customers List** | <img src="screenShoots/customers dark ar.jpeg" width="200" /> | <img src="screenShoots/customers dark en.jpeg" width="200" /> | <img src="screenShoots/customers light.jpeg" width="200" /> |
+| **Customer Books** | <img src="screenShoots/customer book dark ar.jpeg" width="200" /> | <img src="screenShoots/customer book dark en.jpeg" width="200" /> | <img src="screenShoots/customer book light.jpeg" width="200" /> |
 
 ### 📅 Reservations
 | **Status** | **Arabic (Dark)** | **Arabic (Light)** | **English (Light)** |
 | :---: | :---: | :---: | :---: |
-| **Ready** | <img src="screens/reservations ready dark ar.jpeg" width="200" /> | <img src="screens/reservations ready light ar.jpeg" width="200" /> | <img src="screens/reservations ready light en.jpeg" width="200" /> |
-| **Not Ready** | <img src="screens/reservations not ready dark ar.jpeg" width="200" /> | <img src="screens/reservations not ready light ar.jpeg" width="200" /> | <img src="screens/reservations not ready light en.jpeg" width="200" /> |
+| **Ready** | <img src="screenShoots/reservations ready dark ar.jpeg" width="200" /> | <img src="screenShoots/reservations ready light ar.jpeg" width="200" /> | <img src="screenShoots/reservations ready light en.jpeg" width="200" /> |
+| **Not Ready** | <img src="screenShoots/reservations not ready dark ar.jpeg" width="200" /> | <img src="screenShoots/reservations not ready light ar.jpeg" width="200" /> | <img src="screenShoots/reservations not ready light en.jpeg" width="200" /> |
 
 
 ## 🔮 Future Improvements
