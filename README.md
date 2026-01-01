@@ -8,7 +8,6 @@ A comprehensive Flutter application for managing books, customers, reservations,
 -   **Book Management**: Browse, search, and manage book inventory.
 -   **Customer Management**: Track customer details and their association with books.
 -   **Reservations System**: Manage book reservations with real-time updates.
--   **Reports**: Generate and view detailed reports/analytics.
 -   **Localization**: Full support for **Arabic** and **English** (RTL/LTR).
 -   **Theme Support**: Toggle between **Dark** and **Light** modes.
 -   **Responsive Design**: optimized for various screen sizes using `flutter_screenutil`.
@@ -112,4 +111,4 @@ To run this project, you need to:
 -   [ ] **User Authentication**: Expand role-based access control.
 
 ---
-Developed with ❤️ using Flutter.
+Developed with Mohamed Ehab using Flutter.
