@@ -3,6 +3,7 @@ import 'dart:ui' as ui;
 import 'package:easy_localization/easy_localization.dart';
 import 'package:engaz_app/core/theme/app_text_styles.dart';
 import 'package:engaz_app/core/utils/extensions.dart';
+import 'package:engaz_app/core/utils/subjects_list.dart';
 import 'package:engaz_app/shared/data/model/book_dto.dart';
 import 'package:engaz_app/features/customers/presentation/widgets/status_badge.dart';
 import 'package:flutter/material.dart';
@@ -61,13 +62,19 @@ class CustomerBookDetailsWidget extends StatelessWidget {
                     ),
                   ),
                 ),
-                title: Text(
-                  "${bookDto.name}\n${bookDto.subject}",
-                  maxLines: 2,
-                  overflow: TextOverflow.ellipsis,
-                  style: AppTextStyles.body14(
-                    context,
-                  ).copyWith(color: Theme.of(context).scaffoldBackgroundColor),
+                title: FittedBox(
+                  fit: BoxFit.scaleDown,
+                  alignment: Directionality.of(context) == ui.TextDirection.ltr
+                      ? Alignment.centerLeft
+                      : Alignment.centerRight,
+                  child: Text(
+                    "${bookDto.name}\n${subjects[subjects.indexOf(bookDto.subject ?? "")].tr()}",
+                    maxLines: 2,
+                    overflow: TextOverflow.ellipsis,
+                    style: AppTextStyles.body14(context).copyWith(
+                      color: Theme.of(context).scaffoldBackgroundColor,
+                    ),
+                  ),
                 ),
                 subtitle: Text(
                   bookDto.gradeName?.tr() ?? "Grade N/A",

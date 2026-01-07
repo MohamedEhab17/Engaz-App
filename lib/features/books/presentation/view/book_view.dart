@@ -103,6 +103,7 @@ class _BookViewState extends State<BookView> {
                           enabled: state is GetBooksLoading,
 
                           child: CustoMBookContainer(
+                            key: ValueKey(books[index].id),
                             bookModel: books[index],
                             gradeDto: widget.grade!,
                           ),

@@ -62,7 +62,7 @@ class CustomerCubit extends Cubit<CustomerState> {
   //! delete customer
   Future<void> deleteCustomer({required String phone}) async {
     if (kDebugMode) {
-    log("Deleting customer with phone: $phone");
+      log("Deleting customer with phone: $phone");
     }
     emit(CustomerDeleteLoading());
     try {
@@ -83,8 +83,11 @@ class CustomerCubit extends Cubit<CustomerState> {
     final searched = customersList.where((customer) {
       final name = customer.name?.toLowerCase() ?? '';
       final phone = customer.phone?.toLowerCase() ?? '';
+      final address = customer.address?.toLowerCase() ?? '';
       final input = query.toLowerCase();
-      return name.contains(input) || phone.contains(input);
+      return name.contains(input) ||
+          phone.contains(input) ||
+          address.contains(input);
     }).toList();
     customersList = searched;
     emit(GetCustomerSuccess(searched));

@@ -80,9 +80,16 @@ class CustomCustomerContainer extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     spacing: 6,
                     children: [
-                      Text(
-                        customerDto.name ?? "N/A",
-                        style: AppTextStyles.body16(context),
+                      FittedBox(
+                        fit: BoxFit.scaleDown,
+                        alignment:
+                            Directionality.of(context) == ui.TextDirection.ltr
+                            ? Alignment.centerLeft
+                            : Alignment.centerRight,
+                        child: Text(
+                          customerDto.name ?? "N/A",
+                          style: AppTextStyles.body16(context),
+                        ),
                       ),
 
                       Row(
@@ -99,8 +106,10 @@ class CustomCustomerContainer extends StatelessWidget {
                             ),
                           ),
                           GestureDetector(
-                            onTap: () {
-                              openPhoneOrWhatsApp(customerDto.phone ?? "");
+                            onTap: () async {
+                              await openPhoneOrWhatsApp(
+                                customerDto.phone ?? "",
+                              );
                             },
                             child: Text(
                               customerDto.phone ?? "+20123456789",

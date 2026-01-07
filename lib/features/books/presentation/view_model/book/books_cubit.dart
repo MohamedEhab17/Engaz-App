@@ -10,13 +10,15 @@ class BooksCubit extends Cubit<CustomerState> {
   final BookRepositoryContract _repository;
   List<BookDto> _allBooks = [];
   List<BookDto> _filteredBooks = [];
+  List<BookDto> currentBooks = [];
 
   //! fetch all books
   Future<void> fetchBooks(GradeDto grade) async {
     emit(GetBooksLoading());
     try {
       _allBooks = await _repository.getBooks(grade);
-      emit(GetBookSuccess(_allBooks));
+      currentBooks = _allBooks;
+      emit(GetBookSuccess(currentBooks));
     } catch (e) {
       emit(GetBooksFailure(e.toString()));
     }
@@ -35,6 +37,7 @@ class BooksCubit extends Cubit<CustomerState> {
     emit(GetBooksLoading());
     if (query.isEmpty) {
       _filteredBooks = filterBooksByGrade(grade);
+      
       emit(GetBookSuccess(_filteredBooks));
       return;
     }
@@ -45,8 +48,9 @@ class BooksCubit extends Cubit<CustomerState> {
       final input = query.toLowerCase();
       return name.contains(input) || subject.contains(input);
     }).toList();
+    currentBooks = searched;
 
-    emit(GetBookSuccess(searched));
+    emit(GetBookSuccess(currentBooks));
   }
 
   //! add book

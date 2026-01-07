@@ -37,6 +37,7 @@ class _CustoMBookContainerState extends State<CustoMBookContainer> {
   @override
   Widget build(BuildContext context) {
     return BlocBuilder<BooksCubit, CustomerState>(
+      buildWhen: (previous, current) => current is GetBookSuccess,
       builder: (context, state) {
         late BookDto book;
         if (state is GetBookSuccess) {
@@ -150,7 +151,7 @@ class _CustoMBookContainerState extends State<CustoMBookContainer> {
 
                           context.read<BooksCubit>().updateBook(
                             widget.gradeDto,
-                            widget.bookModel.copyWith(
+                            book.copyWith(
                               name: nameController.text.trim(),
                               subject: subjectController.text.trim(),
                               price: price,
